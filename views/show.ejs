@@ -1,0 +1,15 @@
+<%- include("header") %>
+
+<div class="main">
+    <div  id="showData" style="max-height: 50vh; width: fit-content;" class="mid" style="overflow-y: auto;">
+        <% books.forEach((book, index) => { %>
+            <%- JSON.stringify(book) %><% if (index < books.length - 1) { %><br><% } %>
+        <% }); %>
+        
+    </div>
+    <div class="mid" style="width: fit-content; margin: 10px auto; padding: 3px 15px;" onclick="redirect('/')">
+        <h1>HOME</h1>
+    </div>    
+</div>
+
+<%- include("footer") %>

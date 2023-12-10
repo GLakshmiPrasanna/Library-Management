@@ -1,0 +1,43 @@
+<%- include("header") %>
+
+<form method="post" action="/" class="main" id="updateForm" onsubmit="submitForm()">
+    <div class="mid">
+        <label for="bookId">ID: </label>
+        <input type="text" placeholder="Enter id(unique)" id="bookId" name="id" required/>
+    </div>
+    <div class="mid">
+        <label for="bookName">Book Name: </label>
+        <input type="text" placeholder="Enter Book name" id="bookName" name="name" required/>
+    </div>
+    <div class="mid">
+        <button id="updateBtn" type="submit"> UPDATE BOOK </button>
+    </div>
+</form>
+
+<script>
+    async function submitForm() {
+        console.log("Form submitted");
+        const id = document.getElementById('bookId').value;
+        const name = document.getElementById('bookName').value;
+
+        try {
+            const response = await fetch(`/api/books/${id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name }),
+            });
+
+            if (response.ok) {
+                console.log('PATCH request successful');
+            } else {
+                console.error(`Failed to make PATCH request. Status: ${response.status}`);
+            }
+        } catch (error) {
+            console.error('Error during PATCH request:', error);
+        }
+    }
+</script>
+
+<%- include("footer") %>
