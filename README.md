@@ -3,8 +3,8 @@
 This project implements a simple RESTful API for managing a library system. The API supports basic CRUD operations on books and interacts with a MongoDB database for data storage.
 
 ## Prerequisites:
-- **Node.js**: It provides the runtime environment for executing JavaScript on the server side. You can download and install Node.js from the official website: Node.js Downloads.
-- **MongoDB**: The API uses MongoDB as its database system. You need to install MongoDB on your machine. You can download and install MongoDB from the official website: MongoDB Downloads.
+- **Node.js**: It provides the runtime environment for executing JavaScript on the server side. You can download and install Node.js from the official website: [Node.js Downloads](https://nodejs.org/en/download/).
+- **MongoDB**: The API uses MongoDB as its database system. You need to install MongoDB on your machine. You can download and install MongoDB from the official website: [MongoDB Downloads](https://www.mongodb.com/try/download/community).
 - **npm (Node Package Manager)**: npm is used to manage the dependencies (libraries, frameworks, etc.) required by the API. Users don't need to install npm separately, it comes bundled with Node.js.
 ## Installation:
 - Clone the repository: [Repository link](https://github.com/GLakshmiPrasanna/Library-Management)
